@@ -1,0 +1,38 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.container.narrow {
+  width: 100%;
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.container:small {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: clamp(3rem, 14vw, 14vw);
+  }
+}

@@ -1,0 +1,121 @@
+.navbar {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: var(--clrPrimary600-aeaf7110);
+  color: var(--clrNeutral100-f9191126);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+}
+
+.container.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container.narrow {
+  max-width: 720px;
+}
+
+.brand {
+  font-family: 'Playfair Display';
+  color: var(--clrNeutral100-f9191126);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.brand:focus {
+  border-radius: 0.3em;
+  outline-color: var(--clrNeutral100-f9191126);
+  outline-offset: 0.3rem;
+  outline-style: solid;
+  outline-width: 0.2rem;
+}
+
+.brand-image {
+  width: 120px;
+}
+
+.navmenu {
+  display: flex;
+  justify-content: flex-end;
+  grid-column-gap: 1em;
+}
+
+.navlink {
+  padding: 1em 0.5em;
+
+  box-shadow: inset 0 0 0 0 var(--clrSecondary400-685c3959);
+
+  transition: color 200ms ease,box-shadow 200ms ease;
+
+  color: var(--clrNeutral100-f9191126);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.navlink:hover {
+  box-shadow: inset 0 -5px 0 0 var(--clrSecondary400-685c3959);
+  color: var(--clrSecondary400-685c3959);
+}
+
+.navlink:focus {
+  border-radius: 0em;
+  outline-color: var(--clrNeutral100-f9191126);
+  outline-offset: 0.3rem;
+  outline-style: solid;
+  outline-width: 0.2rem;
+}
+
+.navlink:focus-visible {
+  outline-color: var(--clrNeutral100-f9191126);
+  outline-offset: 0.3rem;
+  outline-style: solid;
+  outline-width: 0.2rem;
+}
+
+.navlink:global(.w--current) {
+  color: var(--clrNeutral100-f9191126);
+}
+
+.navlink:global(.w--current):hover {
+  color: var(--clrSecondary400-685c3959);
+}
+
+.navlink.nav-button {
+  padding-right: 2em;
+  padding-left: 2em;
+
+  border-radius: 2em;
+
+  background-color: var(--clrQuarternary400-68656429);
+
+  box-shadow: none;
+
+  transition-property: none;
+
+  color: var(--clrPrimary600-aeaf7110);
+}
+
+.navlink.nav-button:hover {
+  background-color: var(--clrSecondary400-685c3959);
+  color: var(--clrPrimary600-aeaf7110);
+}
+
+.navlink.nav-button:focus {
+  outline-color: var(--clrQuarternary400-68656429);
+}

@@ -1,0 +1,41 @@
+.section {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.section.hero {
+  position: relative;
+  min-height: 600px;
+  background-color: var(--clrPrimary400-6c00fdf1);
+}
+
+.section.title {
+  background-color: var(--clrPrimary400-6c00fdf1);
+  color: var(--clrPrimary999-b0a60ce1);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+}
+
+.container.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container.narrow {
+  max-width: 720px;
+}
