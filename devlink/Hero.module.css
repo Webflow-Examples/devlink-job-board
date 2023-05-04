@@ -14,6 +14,18 @@
   color: var(--clrPrimary999-b0a60ce1);
 }
 
+.section.pricing-gradient {
+  background-image: radial-gradient(circle farthest-corner at 50% 100%, var(--clrPrimary400-6c00fdf1), var(--clrPrimary999-b0a60ce1) 73%);
+  color: var(--clrNeutral100-f9191126);
+}
+
+.section.pricing {
+  position: relative;
+  padding-top: 5em;
+  color: hsla(329.9999999999999, 0.00%, 100.00%, 1.00);
+  text-align: center;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -40,6 +52,11 @@
   max-width: 720px;
 }
 
+.container.rel {
+  position: relative;
+  z-index: 2;
+}
+
 .two-columns {
   display: grid;
   padding-left: 0px;
@@ -54,6 +71,15 @@
   .two-columns {
     grid-template-columns: 1fr;
   }
+}
+
+.two-columns.narrow {
+  max-width: 960px;
+  margin: 3em auto;
+}
+
+@media screen and (max-width: 767px) {
+
 }
 
 .hero-content-wrapper {
@@ -169,6 +195,10 @@
 .button.small {
   padding: 1em 1.5em;
   font-size: 1rem;
+}
+
+.button.sign-up {
+  text-align: center;
 }
 
 #w-node-eec4ca81-6ae6-a937-d67c-2a2debaf4e5f-ebaf4e5c {

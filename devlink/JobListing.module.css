@@ -109,6 +109,10 @@
   font-size: 1rem;
 }
 
+.button.sign-up {
+  text-align: center;
+}
+
 #w-node-_7f42fc01-bdea-9976-acc3-ac76a91ba330-a91ba328 {
   grid-column-start: span 1;
   grid-column-end: span 1;

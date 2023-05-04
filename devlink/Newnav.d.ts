@@ -6,4 +6,10 @@ declare function Newnav(props: {
   brandLink?: Types.Basic.Link;
   homeText?: React.ReactNode;
   homeLink?: Types.Basic.Link;
+  aboutText?: React.ReactNode;
+  aboutLink?: Types.Basic.Link;
+  jobsText?: React.ReactNode;
+  jobsLink?: Types.Basic.Link;
+  postText?: React.ReactNode;
+  postLink?: Types.Basic.Link;
 }): React.JSX.Element;

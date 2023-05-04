@@ -2302,3 +2302,7 @@ a:focus {
   outline-style: solid;
   outline-width: 0.2rem;
 }
+
+li {
+  margin-bottom: 1em;
+}

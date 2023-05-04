@@ -15,6 +15,24 @@ export function Newnav({
   homeLink = {
     href: "#",
   },
+
+  aboutText = "About",
+
+  aboutLink = {
+    href: "#",
+  },
+
+  jobsText = "Jobs",
+
+  jobsLink = {
+    href: "#",
+  },
+
+  postText = "Post a job",
+
+  postLink = {
+    href: "#",
+  },
 }) {
   return (
     <_Component
@@ -61,32 +79,24 @@ export function Newnav({
           </_Builtin.NavbarLink>
           <_Builtin.NavbarLink
             className={_utils.cx(_styles, "navlink")}
-            link={{
-              mode: "external",
-            }}
+            link={aboutLink}
             href="#"
           >
-            {"About"}
+            {aboutText}
           </_Builtin.NavbarLink>
           <_Builtin.NavbarLink
             className={_utils.cx(_styles, "navlink")}
-            link={{
-              url: "#",
-              mode: "external",
-            }}
+            link={jobsLink}
             href="#"
           >
-            {"Jobs"}
+            {jobsText}
           </_Builtin.NavbarLink>
           <_Builtin.NavbarLink
             className={_utils.cx(_styles, "navlink", "nav-button")}
-            link={{
-              url: "#",
-              mode: "external",
-            }}
+            link={postLink}
             href="#"
           >
-            {"Post a job"}
+            {postText}
           </_Builtin.NavbarLink>
         </_Builtin.NavbarMenu>
         <_Builtin.NavbarButton tag="div">

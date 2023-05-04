@@ -29,7 +29,9 @@ export default function Jobs() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Newnav />
+        <Newnav 
+          homeLink={{href: "/"}}
+        />
         <main>
             <Hero 
                 buttonText={"Find a job"}
