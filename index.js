@@ -10,9 +10,9 @@ const app = express();
 let cache = apicache.middleware;
 app.use(cors());
 
-// Uncomment the line below to use
+// Comment out the line below to disable
 // the cache which is set to 5 minutes
-//app.use(cache("5 minutes"));
+app.use(cache("5 minutes"));
 
 // Console log the PORT when server starts
 app.listen(PORT, () => {
@@ -62,7 +62,7 @@ app.get("/jobs/featured", (req, res) => {
 });
 
 // GET request for a single job
-// http://localhost:8000/job/:id
+// http://localhost:8000/jobs/:id
 app.get(`/jobs/:id`, (req, res) => {
   const id = req.params.id;
   const options = {
