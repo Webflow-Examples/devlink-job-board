@@ -33,6 +33,8 @@ export function Newnav({
   postLink = {
     href: "#",
   },
+
+  postJob = {},
 }) {
   return (
     <_Component
@@ -54,8 +56,7 @@ export function Newnav({
       >
         <_Builtin.NavbarBrand
           className={_utils.cx(_styles, "brand")}
-          link={brandLink}
-          href="#"
+          options={brandLink}
         >
           <_Builtin.Image
             className={_utils.cx(_styles, "brand-image")}
@@ -70,36 +71,50 @@ export function Newnav({
           tag="nav"
           role="navigation"
         >
-          <_Builtin.NavbarLink
-            className={_utils.cx(_styles, "navlink")}
-            link={homeLink}
-            href="#"
+          <_Builtin.List
+            className={_utils.cx(_styles, "navlist")}
+            tag="ul"
+            unstyled={false}
           >
-            {homeText}
-          </_Builtin.NavbarLink>
-          <_Builtin.NavbarLink
-            className={_utils.cx(_styles, "navlink")}
-            link={aboutLink}
-            href="#"
-          >
-            {aboutText}
-          </_Builtin.NavbarLink>
-          <_Builtin.NavbarLink
-            className={_utils.cx(_styles, "navlink")}
-            link={jobsLink}
-            href="#"
-          >
-            {jobsText}
-          </_Builtin.NavbarLink>
-          <_Builtin.NavbarLink
-            className={_utils.cx(_styles, "navlink", "nav-button")}
-            link={postLink}
-            href="#"
-          >
-            {postText}
-          </_Builtin.NavbarLink>
+            <_Builtin.ListItem className={_utils.cx(_styles, "navlist-item")}>
+              <_Builtin.NavbarLink
+                className={_utils.cx(_styles, "navlink")}
+                options={homeLink}
+              >
+                {homeText}
+              </_Builtin.NavbarLink>
+            </_Builtin.ListItem>
+            <_Builtin.ListItem className={_utils.cx(_styles, "navlist-item")}>
+              <_Builtin.NavbarLink
+                className={_utils.cx(_styles, "navlink")}
+                options={aboutLink}
+              >
+                {aboutText}
+              </_Builtin.NavbarLink>
+            </_Builtin.ListItem>
+            <_Builtin.ListItem className={_utils.cx(_styles, "navlist-item")}>
+              <_Builtin.NavbarLink
+                className={_utils.cx(_styles, "navlink")}
+                options={jobsLink}
+              >
+                {jobsText}
+              </_Builtin.NavbarLink>
+            </_Builtin.ListItem>
+            <_Builtin.ListItem className={_utils.cx(_styles, "navlist-item")}>
+              <_Builtin.NavbarLink
+                className={_utils.cx(_styles, "navlink", "nav-button")}
+                options={postLink}
+                {...postJob}
+              >
+                {postText}
+              </_Builtin.NavbarLink>
+            </_Builtin.ListItem>
+          </_Builtin.List>
         </_Builtin.NavbarMenu>
-        <_Builtin.NavbarButton tag="div">
+        <_Builtin.NavbarButton
+          className={_utils.cx(_styles, "hamburger")}
+          tag="div"
+        >
           <_Builtin.Icon
             widget={{
               type: "icon",

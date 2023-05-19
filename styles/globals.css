@@ -31,6 +31,17 @@
   padding-left: 1.5em;
 }
 
+.section-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .hero-heading {
     font-size: clamp(3rem, 14vw, 14vw);

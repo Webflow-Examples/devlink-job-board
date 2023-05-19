@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import { Newnav } from '@/devlink'
-import { AboutHero, AboutInformation } from '@/devlink'
+import { Newnav, AboutHero, AboutInformation, Footer } from '@/devlink'
 import { useState, useEffect } from 'react';
 
 export default function Jobs() {
+  const copyYear = new Date().getFullYear();
   const [jobsData, setJobsData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -31,13 +31,19 @@ export default function Jobs() {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Newnav 
-            brandLink={{ href: "/index" }}
-            homeLink={{ href: "/" }}
+          brandLink={{ href: "/" }}
+          homeLink={{href: "/"}}
+          aboutLink={{href: "/about"}}
+          jobsLink={{href: "/jobs"}}
+          postJob={{onClick: function() {alert("Can't post a job, this is a demo site")}}}
         />
         <main>
             <AboutHero />
             <AboutInformation />
         </main>
+        <Footer
+          year={copyYear}
+          />
       </>
     )
 }

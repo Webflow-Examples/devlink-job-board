@@ -31,6 +31,7 @@ export function AboutHero({ as: _Component = _Builtin.Section }) {
             </_Builtin.Paragraph>
           </_Builtin.Block>
           <_Builtin.Block
+            className={_utils.cx(_styles, "hero-image-wrapper")}
             id={_utils.cx(
               _styles,
               "w-node-e99518a0-9081-2bc9-a4b2-c23fb0c1b419-b0c1b411"
@@ -38,6 +39,7 @@ export function AboutHero({ as: _Component = _Builtin.Section }) {
             tag="div"
           >
             <_Builtin.Image
+              className={_utils.cx(_styles, "hero-image")}
               loading="lazy"
               width="auto"
               height="auto"

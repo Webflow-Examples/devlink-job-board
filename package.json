@@ -13,7 +13,7 @@
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
-    "@webflow/webflow-cli": "^1.0.5",
+    "@webflow/webflow-cli": "^1.1.1",
     "airtable": "^0.11.6",
     "apicache": "^1.6.3",
     "cors": "^2.8.5",

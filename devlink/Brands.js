@@ -5,7 +5,7 @@ import _styles from "./Brands.module.css";
 
 export function Brands({ as: _Component = _Builtin.Section }) {
   return (
-    <_Component className={_utils.cx(_styles, "section")} tag="div">
+    <_Component className={_utils.cx(_styles, "section")} tag="section">
       <_Builtin.Container className={_utils.cx(_styles, "container")} tag="div">
         <_Builtin.Heading
           className={_utils.cx(_styles, "brand-heading")}
@@ -23,6 +23,7 @@ export function Brands({ as: _Component = _Builtin.Section }) {
             tag="div"
           >
             <_Builtin.Image
+              className={_utils.cx(_styles, "logo")}
               id={_utils.cx(
                 _styles,
                 "w-node-b77115e0-1822-f0f7-10e0-565207c3febf-07c3feb9"
@@ -42,6 +43,7 @@ export function Brands({ as: _Component = _Builtin.Section }) {
             tag="div"
           >
             <_Builtin.Image
+              className={_utils.cx(_styles, "logo")}
               loading="lazy"
               width="auto"
               height="auto"
@@ -57,6 +59,7 @@ export function Brands({ as: _Component = _Builtin.Section }) {
             tag="div"
           >
             <_Builtin.Image
+              className={_utils.cx(_styles, "logo")}
               id={_utils.cx(
                 _styles,
                 "w-node-b77115e0-1822-f0f7-10e0-565207c3fec3-07c3feb9"
@@ -76,6 +79,7 @@ export function Brands({ as: _Component = _Builtin.Section }) {
             tag="div"
           >
             <_Builtin.Image
+              className={_utils.cx(_styles, "logo")}
               loading="lazy"
               width="auto"
               height="auto"
@@ -91,6 +95,7 @@ export function Brands({ as: _Component = _Builtin.Section }) {
             tag="div"
           >
             <_Builtin.Image
+              className={_utils.cx(_styles, "logo")}
               loading="lazy"
               width="auto"
               height="auto"

@@ -6,7 +6,8 @@
 .section.hero {
   position: relative;
   min-height: 600px;
-  background-color: var(--clrPrimary400-6c00fdf1);
+  background-color: var(--clrPrimary600-aeaf7110);
+  color: var(--clrNeutral100-f9191126);
 }
 
 .section.title {
@@ -24,6 +25,18 @@
   padding-top: 5em;
   color: hsla(329.9999999999999, 0.00%, 100.00%, 1.00);
   text-align: center;
+}
+
+.clr-secondary-400 {
+  background-color: var(--clrSecondary400-685c3959);
+}
+
+.clr-primary-400 {
+  background-color: var(--clrPrimary400-6c00fdf1);
+}
+
+.section.features {
+  color: var(--clrPrimary600-aeaf7110);
 }
 
 .container {

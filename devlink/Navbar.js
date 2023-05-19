@@ -47,8 +47,7 @@ export function Navbar({
       >
         <_Builtin.NavbarBrand
           className={_utils.cx(_styles, "brand")}
-          link={brandLink}
-          href="#"
+          options={brandLink}
         >
           <_Builtin.Image
             className={_utils.cx(_styles, "brand-image")}
@@ -65,32 +64,27 @@ export function Navbar({
         >
           <_Builtin.NavbarLink
             className={_utils.cx(_styles, "navlink")}
-            link={homeLink}
-            href="#"
+            options={homeLink}
           >
             {homeText}
           </_Builtin.NavbarLink>
           <_Builtin.NavbarLink
             className={_utils.cx(_styles, "navlink")}
-            link={aboutLink}
-            href="#"
+            options={aboutLink}
           >
             {aboutText}
           </_Builtin.NavbarLink>
           <_Builtin.NavbarLink
             className={_utils.cx(_styles, "navlink")}
-            link={jobsLink}
-            href="#"
+            options={jobsLink}
           >
             {jobsText}
           </_Builtin.NavbarLink>
           <_Builtin.NavbarLink
             className={_utils.cx(_styles, "navlink", "nav-button")}
-            link={{
-              url: "#",
-              mode: "external",
+            options={{
+              href: "#",
             }}
-            href="#"
           >
             {"Post a job"}
           </_Builtin.NavbarLink>

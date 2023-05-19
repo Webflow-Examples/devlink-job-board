@@ -12,4 +12,5 @@ declare function Newnav(props: {
   jobsLink?: Types.Basic.Link;
   postText?: React.ReactNode;
   postLink?: Types.Basic.Link;
+  postJob?: Types.Devlink.RuntimeProps;
 }): React.JSX.Element;

@@ -53,12 +53,47 @@
 
 .brand-image {
   width: 120px;
+  height: 93px;
 }
 
 .navmenu {
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 991px) {
+  .navmenu {
+    padding: 2rem;
+    background-color: var(--clrPrimary600-aeaf7110);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navmenu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.navlist {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
   grid-column-gap: 1em;
+
+  list-style-type: none;
+}
+
+@media screen and (max-width: 991px) {
+  .navlist {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.navlist-item {
+  margin-bottom: 0em;
 }
 
 .navlink {
@@ -101,6 +136,12 @@
   color: var(--clrSecondary400-685c3959);
 }
 
+@media screen and (max-width: 767px) {
+  .navlink {
+    text-align: center;
+  }
+}
+
 .navlink.nav-button {
   padding-right: 2em;
   padding-left: 2em;
@@ -123,4 +164,18 @@
 
 .navlink.nav-button:focus {
   outline-color: var(--clrQuarternary400-68656429);
+}
+
+@media screen and (max-width: 991px) {
+  .hamburger {
+    background-color: var(--clrPrimary600-aeaf7110);
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hamburger:global(.w--open) {
+    background-color: var(--clrPrimary400-6c00fdf1);
+    color: var(--clrPrimary600-aeaf7110);
+  }
 }

@@ -53,12 +53,26 @@
 
 .brand-image {
   width: 120px;
+  height: 93px;
 }
 
 .navmenu {
   display: flex;
   justify-content: flex-end;
-  grid-column-gap: 1em;
+}
+
+@media screen and (max-width: 991px) {
+  .navmenu {
+    padding: 2rem;
+    background-color: var(--clrPrimary600-aeaf7110);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navmenu {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .navlink {
@@ -99,6 +113,12 @@
 
 .navlink:global(.w--current):hover {
   color: var(--clrSecondary400-685c3959);
+}
+
+@media screen and (max-width: 767px) {
+  .navlink {
+    text-align: center;
+  }
 }
 
 .navlink.nav-button {

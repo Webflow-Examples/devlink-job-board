@@ -41,7 +41,7 @@ export function Hero({
               }
             </_Builtin.Paragraph>
             <_Builtin.Link
-              className={_utils.cx(_styles, "button")}
+              className={_utils.cx(_styles, "button", "secondary")}
               button={true}
               options={buttonLink}
             >
@@ -49,6 +49,7 @@ export function Hero({
             </_Builtin.Link>
           </_Builtin.Block>
           <_Builtin.Block
+            className={_utils.cx(_styles, "hero-image-wrapper")}
             id={_utils.cx(
               _styles,
               "w-node-eec4ca81-6ae6-a937-d67c-2a2debaf4e6a-ebaf4e5c"
@@ -56,7 +57,8 @@ export function Hero({
             tag="div"
           >
             <_Builtin.Image
-              loading="lazy"
+              className={_utils.cx(_styles, "hero-image")}
+              loading="eager"
               width="auto"
               height="auto"
               src="https://uploads-ssl.webflow.com/644d71f7a83e2ea6946fafd7/644ea54b57472ff521fca399_main-object.png"
