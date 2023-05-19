@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "backend": "nodemon index.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "backend": "nodemon index.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "18.16.3",
