@@ -1,26 +1,10 @@
 import Head from "next/head";
 import { PageHeading, Newnav, Details, Footer } from "@/devlink";
+import { fetchJob } from "../../fetchJob";
 
-export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:8000/jobs");
-  const data = await res.json();
-
-  const paths = data.records.map((job) => {
-    return {
-      params: { id: job.id },
-    };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const id = context.params.id;
-  const res = await fetch(`http://localhost:8000/jobs/${id}`);
-  const data = await res.json();
+  const data = await fetchJob(id);
 
   return {
     props: { job: data },

@@ -10,7 +10,7 @@ export default function Jobs() {
   
   useEffect(() => {
 
-  fetch('http://localhost:8000/jobs/featured')
+  fetch('api/jobs/featured')
   .then((response) => response.json())
   .then((data) => {
     setJobsData(data.records);
