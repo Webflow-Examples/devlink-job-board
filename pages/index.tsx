@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { JobListing, Newnav, Hero, Brands, Pricing, Features, Footer, PricingGrid } from '@/devlink'
+import { JobListing, Newnav, Hero, Brands, Pricing, Features, Footer, PricingGrid, Cta } from '@/devlink'
 import { useState, useEffect } from 'react';
 
 export default function Jobs() {
@@ -47,6 +47,10 @@ export default function Jobs() {
               employerPrice={"$95"}
               applicantPricing={"$9"}
               pricingBottom={ <PricingGrid /> }
+            />
+            <Cta 
+              headingText={"Ready to get started?"}
+              button={{onClick: function() {alert("Can't post a job, this is a demo site")}}}
             />
             <Features />
             <section className='section' id='jobs'>

@@ -70,6 +70,10 @@
   z-index: 2;
 }
 
+.center {
+  text-align: center;
+}
+
 .two-columns {
   display: grid;
   padding-left: 0px;

@@ -87,10 +87,18 @@
   z-index: 2;
 }
 
+.center {
+  text-align: center;
+}
+
 .mw-70ch {
   max-width: 70ch;
   margin-right: auto;
   margin-left: auto;
+}
+
+.mb2 {
+  margin-bottom: 2rem;
 }
 
 .two-columns {

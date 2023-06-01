@@ -7,6 +7,7 @@ export * from "./devlink";
 export * from "./AboutHero";
 export * from "./AboutInformation";
 export * from "./Brands";
+export * from "./Cta";
 export * from "./Details";
 export * from "./Features";
 export * from "./Footer";

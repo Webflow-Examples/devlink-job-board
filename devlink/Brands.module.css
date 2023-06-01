@@ -70,6 +70,10 @@
   z-index: 2;
 }
 
+.center {
+  text-align: center;
+}
+
 .brand-heading {
   margin-bottom: 2em;
   color: var(--clrPrimary600-aeaf7110);
