@@ -24,7 +24,6 @@ We created a light weight backend to serve up the content from Airtable. In orde
 JOBS_KEY=YOURPERSONALACCESSTOKENHERE
 WF_SITE_ID=YOURPERSONALWEBFLOWSITEID
 WF_SITE_TOKEN=YOURPERSONALWEBFLOWSITETOKEN
-
 ```
 
 Here you can add your Airtable token, your Webflow Site ID, and your Webflow API token.
