@@ -43,51 +43,60 @@ const enhanceIXData = (data, styles) => {
 const IXContext = React.createContext(null);
 export const InteractionsProvider = ({ children, createEngine }) => {
   const ixData = React.useRef({});
+  const ixStyles = React.useRef();
   const ixEngine = React.useRef();
   const debouncedInit = React.useRef(
-    debounce((data) => {
+    debounce((data, styles) => {
       if (!ixEngine.current) ixEngine.current = createEngine();
-      ixEngine.current.init(data);
-      document.dispatchEvent(new CustomEvent("IX2_PAGE_UPDATE"));
+      const newData = styles ? enhanceIXData(data, styles) : data;
+      ixEngine.current.init(newData);
+      dispatchCustomEvent(document, "IX2_PAGE_UPDATE");
     })
   );
   const initEngine = React.useCallback((data, styles) => {
-    const newIXData = enhanceIXData(data, styles);
-    if (!newIXData) return;
     if (!ixData.current.site) {
-      ixData.current.site = newIXData.site;
+      ixData.current.site = data.site;
     }
     ixData.current.events = {
       ...ixData.current.events,
-      ...newIXData.events,
+      ...data.events,
     };
     ixData.current.actionLists = {
       ...ixData.current.actionLists,
-      ...newIXData.actionLists,
+      ...data.actionLists,
     };
-    debouncedInit.current(ixData.current);
+    if (styles) {
+      // Check if styles exist. If ixStyles.current is falsy, set it to an empty object
+      ixStyles.current = ixStyles.current ?? {};
+      // Loop through each property in the styles object
+      for (const s in styles) {
+        // Check if the current style is not already included in ixStyles.current
+        if (!ixStyles.current[s]?.includes(styles[s])) {
+          // Get the current style value from ixStyles.current
+          const currentStyle = ixStyles.current[s];
+          // Concatenate the new style with the current style (if it exists)
+          ixStyles.current[s] =
+            styles[s] + (currentStyle ? ` ${currentStyle}` : "");
+        }
+      }
+    }
+    debouncedInit.current(ixData.current, ixStyles.current);
   }, []);
-  return React.createElement(
-    IXContext.Provider,
-    { value: initEngine },
-    children
-  );
+  return <IXContext.Provider value={initEngine}>{children}</IXContext.Provider>;
 };
-export const useInteractions = (data, styles, ...nodes) => {
+export const useInteractions = (data, styles) => {
   const initEngine = React.useContext(IXContext);
   React.useEffect(() => {
-    if (initEngine) initEngine(data, styles, ...nodes);
-  }, [initEngine, data, nodes, styles]);
+    if (initEngine) initEngine(data, styles);
+  }, [initEngine, data, styles]);
   React.useEffect(() => {
     if (document.querySelector("html")?.hasAttribute("data-wf-page")) return;
     const hasPageInteractions = Object.values(data.events).some(
       (event) => event.target.appliesTo === "PAGE"
     );
     if (hasPageInteractions) {
-      document
-        .querySelector("html")
-        ?.setAttribute("data-wf-page", "wf-page-id");
-      document.dispatchEvent(new CustomEvent("IX2_PAGE_UPDATE"));
+      document.documentElement.setAttribute("data-wf-page", "wf-page-id");
+      dispatchCustomEvent(document, "IX2_PAGE_UPDATE");
     }
   }, [data.events]);
 };
