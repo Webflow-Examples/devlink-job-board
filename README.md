@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to view th
 
 ## Backend and environment variables
 
-We created a light weight backend to serve up the content from Airtable. In order for this to work, you'll need to get a copy of the Airtable (ask Ben Parker), generate a [personal access token](https://airtable.com/developers/web/guides/personal-access-tokens) in Airtable (I used the scopes `data.records:read` and `schema.records.read`) and then in the root of your project create a `.env` file locally with the lines:
+We created a light weight backend to serve up the content from Airtable. In order for this to work, you'll need to get a copy of [the Airtable](https://airtable.com/shr7X55pL1X4yDXq7), generate a [personal access token](https://airtable.com/developers/web/guides/personal-access-tokens) in Airtable (I used the scopes `data.records:read` and `schema.records.read`) and then in the root of your project create a `.env` file locally with the lines:
 
 ```
 JOBS_KEY=YOURPERSONALACCESSTOKENHERE
