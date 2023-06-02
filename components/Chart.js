@@ -5,10 +5,10 @@ import { Pie } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const data = {
-  labels: ["Applicants", "Employers"],
+  labels: ["More than 7 days", "Less than a week"],
   datasets: [
     {
-      label: "% of all users",
+      label: "% of open roles",
       data: [15, 85],
       backgroundColor: ["rgba(153, 102, 255, 0.2)", "rgba(54, 162, 235, 0.2)"],
       borderColor: ["rgba(153, 102, 255, 1)", "rgba(54, 162, 235, 1)"],

@@ -76,7 +76,7 @@ export const InteractionsProvider = ({ children, createEngine }) => {
           const currentStyle = ixStyles.current[s];
           // Concatenate the new style with the current style (if it exists)
           ixStyles.current[s] =
-            styles[s] + (currentStyle ? ` ${currentStyle}` : "");
+            CSS.escape(styles[s]) + (currentStyle ? ` ${currentStyle}` : "");
         }
       }
     }

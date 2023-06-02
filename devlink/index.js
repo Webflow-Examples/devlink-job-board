@@ -18,3 +18,4 @@ export * from "./Newnav";
 export * from "./PageHeading";
 export * from "./Pricing";
 export * from "./PricingGrid";
+export * from "./Stats";

@@ -12,7 +12,7 @@ export default function handler(req, res) {
     },
   };
   fetch(
-    `https://api.airtable.com/v0/appWq0aT7C7M3apm8/Jobs?view=Grid%20view`,
+    `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Jobs?view=Grid%20view`,
     options
   )
     .then((response) => response.json())

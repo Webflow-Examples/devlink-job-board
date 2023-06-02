@@ -191,3 +191,28 @@ export function useClickOut(ref, action) {
     };
   }, [ref, action]);
 }
+export function extractElement(elements, type) {
+  let extracted;
+  // Use inner function to preserve scope so recursion is easier to read
+  function removeElementByType(elements) {
+    return elements.map((element) => {
+      if (!React.isValidElement(element)) {
+        return element;
+      }
+      if (element.type === type) {
+        // We found the element we want to extract
+        extracted = element;
+        // We don't include it in the returned array, essentially removing it from the tree
+        return null;
+      }
+      // Recursively process the children
+      const children = removeElementByType(
+        React.Children.toArray(element.props.children)
+      );
+      // Return a new element with the updated children
+      return React.cloneElement(element, element.props, ...children);
+    });
+  }
+  const tree = removeElementByType(elements);
+  return { extracted, tree };
+}

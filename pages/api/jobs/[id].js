@@ -12,7 +12,10 @@ export default function handler(req, res) {
       Authorization: `Bearer ${process.env.JOBS_KEY}`,
     },
   };
-  fetch(`https://api.airtable.com/v0/appWq0aT7C7M3apm8/Jobs/${id}`, options)
+  fetch(
+    `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Jobs/${id}`,
+    options
+  )
     .then((response) => response.json())
     .then((usefulData) => {
       res.json(usefulData);

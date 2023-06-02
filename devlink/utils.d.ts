@@ -96,3 +96,12 @@ export declare function useClickOut(
   ref: React.RefObject<HTMLElement>,
   action: () => void
 ): void;
+export declare function extractElement<
+  T extends React.JSXElementConstructor<any>
+>(
+  elements: React.ReactNode[],
+  type: T
+): {
+  extracted: React.ReactNode;
+  tree: React.ReactNode[];
+};

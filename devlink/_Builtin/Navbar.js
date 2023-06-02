@@ -3,6 +3,7 @@ import {
   EASING_FUNCTIONS,
   cj,
   debounce,
+  extractElement,
   isServer,
   useLayoutEffect,
   useResizeObserver,
@@ -151,34 +152,11 @@ export function NavbarWrapper(props) {
  * */
 const maybeExtractChildMenu = (children, isOpen) => {
   if (!isOpen) return { childMenu: null, rest: children };
-  const childrenArray = React.Children.toArray(children);
-  const { childMenu, rest } = childrenArray.reduce(
-    (acc, child) => {
-      if (child.type === NavbarMenu) {
-        acc.childMenu = child;
-        return acc;
-      }
-      if (child.type === NavbarContainer) {
-        const { children: containerChildren, ...containerProps } = child.props;
-        const { childMenu, rest } = maybeExtractChildMenu(
-          containerChildren,
-          isOpen
-        );
-        acc.childMenu = childMenu;
-        acc.rest.push(
-          <NavbarContainer {...containerProps}>{rest}</NavbarContainer>
-        );
-        return acc;
-      }
-      acc.rest.push(child);
-      return acc;
-    },
-    { childMenu: null, rest: [] }
+  const { extracted, tree } = extractElement(
+    React.Children.toArray(children),
+    NavbarMenu
   );
-  return {
-    childMenu,
-    rest: <>{rest.map((e, i) => React.cloneElement(e, { key: i }))}</>,
-  };
+  return { childMenu: extracted, rest: tree };
 };
 function Navbar({ tag = "div", className = "", children, config, ...props }) {
   const { root, collapse } = React.useContext(NavbarContext);
@@ -188,7 +166,10 @@ function Navbar({ tag = "div", className = "", children, config, ...props }) {
       setShouldExtractMenu(entry.contentRect.width <= BREAKPOINTS[collapse]),
     [setShouldExtractMenu]
   );
-  useResizeObserver(root, extractMenuCallback);
+  const bodyRef = React.useRef(
+    typeof document !== "undefined" ? document.body : null
+  );
+  useResizeObserver(bodyRef, extractMenuCallback);
   const { childMenu, rest } = React.useMemo(
     () => maybeExtractChildMenu(children, shouldExtractMenu),
     [children, shouldExtractMenu]
@@ -227,7 +208,7 @@ function NavbarOverlay({ children }) {
       style={{
         display: isOpen ? "block" : "none",
         height: getOverlayHeight(),
-        width: isOpen ? "100vw" : 0,
+        width: isOpen ? "100%" : 0,
       }}
       onClick={overlayToggleOpen}
     >

@@ -8,6 +8,8 @@ import {
   Features,
   Footer,
   Cta,
+  Stats,
+  PricingGrid
 } from "@/devlink";
 import { Chart } from "@/components";
 import { useState, useEffect } from "react";
@@ -57,7 +59,7 @@ export default function Jobs() {
         <Pricing
           employerPrice={"$95"}
           applicantPricing={"$9"}
-          pricingBottom={<Chart />}
+          pricingBottom={<PricingGrid />}
         />
         <Cta
           headingText={"Ready to get started?"}
@@ -68,6 +70,9 @@ export default function Jobs() {
           }}
         />
         <Features />
+        <Stats 
+          chart={<Chart />}
+        />
         <section className="section" id="jobs">
           <div className="container">
             <h2 className="section-header">Featured Jobs</h2>
