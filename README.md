@@ -12,7 +12,7 @@ Here's a Loom video to walk you through the process:
 
 
 
-You can also view our DevLink documentation to 
+You can also view [our DevLink documentation](https://docs.developers.webflow.com/docs/devlink-documentation-and-usage-guide) to learn more about all the options, features, and supported elements.
 
 ## Getting Started
 
