@@ -7,7 +7,7 @@ export async function fetchJob(id) {
 
   try {
     const res = await fetch(
-      `https://api.airtable.com/v0/appWq0aT7C7M3apm8/Jobs/${id}`,
+      `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/Jobs/${id}`,
       options
     );
     const data = await res.json();
