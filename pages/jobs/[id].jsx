@@ -1,6 +1,10 @@
 import Head from "next/head";
-import { PageHeading, Newnav, Details, Footer } from "@/devlink";
+import { PageHeading } from "@/webflow/PageHeading";
+import { Newnav } from "@/webflow/Newnav";
+import { Details } from "@/webflow/Details";
+import { Footer } from "@/webflow/Footer";
 import { fetchJob } from "../../fetchJob";
+import { DevLinkFontTags } from "@/webflow/webflow_modules/DevLinkFontTags";
 
 export const getServerSideProps = async (context) => {
   const id = context.params.id;
@@ -22,6 +26,7 @@ export default function Jobs({ job }) {
         <meta name="description" content="Jobs" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <DevLinkFontTags />
       </Head>
       <Newnav
         brandLink={{ href: "/" }}

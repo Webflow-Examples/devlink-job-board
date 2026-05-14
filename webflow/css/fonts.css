@@ -1,0 +1,20 @@
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,300italic,400italic,600italic,700italic,800italic|Inter:300,400,500,600,700|Playfair+Display:300,400,500,600,700|Roboto+Mono:300,400,500,600,700|Vidaloka:300,400,500,600,700&subset=latin");
+
+@font-face {
+  font-family: "Comicsands";
+  src: url("https://cdn.prod.website-files.com/6a0613f2c6963b3cec80c47c/6a0613f5c6963b3cec80c518_ComicSands-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Comicsands";
+  src: url("https://cdn.prod.website-files.com/6a0613f2c6963b3cec80c47c/6a0613f5c6963b3cec80c519_ComicSands-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

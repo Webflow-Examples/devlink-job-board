@@ -6,21 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@types/node": "18.16.3",
-    "@types/react": "18.2.0",
-    "@types/react-dom": "18.2.1",
-    "@webflow/webflow-cli": "^1.2.2",
-    "chart.js": "^4.3.0",
-    "dotenv": "^16.0.3",
-    "eslint": "8.39.0",
-    "eslint-config-next": "13.3.1",
-    "next": "13.3.1",
-    "react": "18.2.0",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@webflow/webflow-cli": "^1.21.0",
+    "chart.js": "^4.5.1",
+    "dotenv": "^16.6.1",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.2.6",
+    "next": "16.2.6",
+    "react": "^19.2.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.0",
+    "typescript": "~5.9.3"
+  },
+  "overrides": {
+    "electron-to-chromium": "1.5.200",
+    "@dotenvx/dotenvx": "1.39.0"
   }
 }

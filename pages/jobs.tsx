@@ -1,5 +1,8 @@
 import Head from 'next/head';
-import { JobListing, Newnav, Brands, PageHeading, Footer } from '@/devlink'
+import { JobListing } from '@/webflow/JobListing';
+import { Newnav } from '@/webflow/Newnav';
+import { PageHeading } from '@/webflow/PageHeading';
+import { Footer } from '@/webflow/Footer';
 import { useState, useEffect } from 'react';
 
 export default function Jobs() {

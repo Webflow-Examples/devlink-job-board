@@ -1,16 +1,14 @@
 import Head from "next/head";
-import {
-  JobListing,
-  Newnav,
-  Hero,
-  Brands,
-  Pricing,
-  Features,
-  Footer,
-  Cta,
-  Stats,
-  PricingGrid
-} from "@/devlink";
+import { JobListing } from "@/webflow/JobListing";
+import { Newnav } from "@/webflow/Newnav";
+import { Hero } from "@/webflow/Hero";
+import { Brands } from "@/webflow/Brands";
+import { Pricing } from "@/webflow/Pricing";
+import { Features } from "@/webflow/Features";
+import { Footer } from "@/webflow/Footer";
+import { Cta } from "@/webflow/Cta";
+import { Stats } from "@/webflow/Stats";
+import { PricingGrid } from "@/webflow/PricingGrid";
 import { Chart } from "@/components";
 import { useState, useEffect } from "react";
 

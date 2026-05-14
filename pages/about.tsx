@@ -1,5 +1,8 @@
 import Head from 'next/head';
-import { Newnav, AboutHero, AboutInformation, Footer } from '@/devlink'
+import { Newnav } from '@/webflow/Newnav'
+import { AboutHero } from '@/webflow/AboutHero'
+import { AboutInformation } from '@/webflow/AboutInformation'
+import { Footer } from '@/webflow/Footer'
 
 export default function Jobs() {
   const copyYear = new Date().getFullYear();
