@@ -6,7 +6,6 @@
       "version": "1.21.0"
     }
   },
-  "siteId": "6a0613f2c6963b3cec80c47c",
   "devlink-export": {
     "rootDir": "./webflow",
     "components": ".*",
