@@ -9,21 +9,21 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
     "chart.js": "^4.5.1",
-    "dotenv": "^16.6.1",
-    "eslint": "^9.39.1",
-    "eslint-config-next": "16.2.6",
     "next": "16.2.6",
     "react": "^19.2.0",
     "react-chartjs-2": "^5.3.1",
-    "react-dom": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.2.6",
     "typescript": "~5.9.3"
   },
   "overrides": {
-    "electron-to-chromium": "1.5.200",
-    "@dotenvx/dotenvx": "1.39.0"
+    "electron-to-chromium": "1.5.200"
   }
 }
