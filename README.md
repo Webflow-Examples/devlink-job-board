@@ -54,11 +54,8 @@ Open <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">h
 
 You should see an error in the console:
 
-> **Expected message**
->
-> ```
-> installHook.js:1  Server  Missing JOBS_KEY or AIRTABLE_BASE_ID — job data unavailable
-> ```
+> [!WARNING]
+> `installHook.js:1  Server  Missing JOBS_KEY or AIRTABLE_BASE_ID — job data unavailable`
 
 This is because we have not set up the backend yet.
 
