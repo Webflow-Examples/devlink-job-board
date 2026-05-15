@@ -8,6 +8,12 @@ You can clone the Webflow project used with this Next JS project at:
 
 ## Set up your local environment
 
+> [!NOTE]
+> To **preview the app locally**, run `npm install` and `npm run dev`. You do **not** need the Webflow CLI unless you you make changes to the DevLink components from the cloned Webflow site. If you do make changes, you'll need to run `npx webflow devlink export` to update the components in the `webflow/` directory.
+>
+> **Job listings** stay empty until you configure the Airtable-backed API keys in `.env`—follow [Backend and environment variables](#backend-and-environment-variables) below.
+
+
 Install Webflow CLI (global install is optional; you can also run the CLI without `npx` in the export step below).
 
 ```bash
